@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Where Did I Park?</string>
     <string name="action_settings">Settings</string>
+    <string name="where_is_my_car">Where is my car?</string>
+    <string name="where_is_my_bike">Where is my bike?</string>
+    <string name="hint_car">Enter notes such as what parking garage, floor, section, lot, ...</string>
 </resources>

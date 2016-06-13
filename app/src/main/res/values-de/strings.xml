@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Where Did I Park?</string>
+    <string name="where_is_my_car">Wo ist mein Auto?</string>
+    <string name="where_is_my_bike">Wo ist mein Fahrrad?</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="hint_car">Notiere Infos wie welche Parkgarage, Parkebene, Sektion, ...</string>
+</resources>
