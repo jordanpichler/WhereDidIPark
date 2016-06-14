@@ -15,27 +15,26 @@
         android:layout_height="match_parent"
         android:layout_gravity="center">
 
-        <Button
-            style="?android:attr/buttonStyleSmall"
+        <fragment
+            class="at.fhooe.mc.android.fragment_car"
+            android:id="@+id/fragment_map"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="placeholder google maps"
-            android:id="@+id/car_google_map"
+            android:layout_weight="10"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="50" />
+            />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="30">
+            android:layout_weight="0">
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/car_notes"
-                android:layout_weight="50"
+                android:layout_weight="5"
                 android:hint="@string/hint_car" />
 
             <Button
@@ -43,7 +42,7 @@
                 android:layout_height="match_parent"
                 android:text="photo"
                 android:id="@+id/car_photo"
-                android:layout_weight="50" />
+                android:layout_weight="10" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

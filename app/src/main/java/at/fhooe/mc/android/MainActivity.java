@@ -17,7 +17,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         b.setOnClickListener(this);
         b = (Button) findViewById(R.id.main_where_is_bike);
         b.setOnClickListener(this);
-
     }
 
     @Override

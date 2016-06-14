@@ -4,4 +4,8 @@
     <string name="where_is_my_car">Where is my car?</string>
     <string name="where_is_my_bike">Where is my bike?</string>
     <string name="hint_car">Enter notes such as what parking garage, floor, section, lot, ...</string>
+    <string name="title_activity_test_map">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
