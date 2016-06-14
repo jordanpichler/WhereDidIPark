@@ -15,8 +15,21 @@ package="at.fhooe.mc.android">
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-    <activity android:name=".where_car" />
-    <activity android:name=".where_bike"></activity>
+    <activity
+        android:name=".where_car"
+        android:parentActivityName=".MainActivity">>
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+    </activity>
+
+    <activity
+        android:name=".where_bike"
+        android:parentActivityName=".MainActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+    </activity>
 
     <!-- API KEY for Google Maps -->
     <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAzWHRB8quXxisUc5RvNbqMvWnNWvnnli4" />

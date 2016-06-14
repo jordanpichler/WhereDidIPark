@@ -1,85 +1,71 @@
 package at.fhooe.mc.android;
 
-<<<<<<< HEAD
+
+import android.app.ActionBar;
 import android.content.Intent;
-import android.location.Location;
-=======
->>>>>>> 892a6ea85f5ef4ca25af1ff94e4eb403ff3a9a8f
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
-<<<<<<< HEAD
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.OnMapReadyCallback;
-=======
->>>>>>> 892a6ea85f5ef4ca25af1ff94e4eb403ff3a9a8f
-
 public class where_car extends FragmentActivity implements View.OnClickListener {
     static final int REQUEST_IMAGE_CAPTURE = 1;
+    public boolean SAVE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_where_car);
 
+        SAVE = false;
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setTitle("Your Car");
+        actionBar.setHomeButtonEnabled(true);
+
         ImageView car_photo = (ImageView) findViewById(R.id.car_photo);
         car_photo.setOnClickListener(this);
 
     }
-<<<<<<< HEAD
 
     @Override
     public void onClick(View _v) {
         if (_v.getId() == R.id.car_photo) {
             Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(i, REQUEST_IMAGE_CAPTURE);
-
         }
     }
 
-
-    /*
     @Override
-    protected void onResume() {
-        super.onResume();
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_options, menu);
+        return true;
     }
 
     @Override
-    protected void onPause() {
-        super.onPause();
-    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_delete : {
+                fragment_car.SAVE = false;
+                fragment_car.userLocation.setVisible(false);
+                fragment_car.carLocation.setVisible(true);
+            } break;
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
+            case R.id.action_save : {
+                fragment_car.SAVE = true;
+            } break;
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
+            default : {
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-    }
+            }
+        }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
+        return super.onOptionsItemSelected(item);
     }
-
-    @Override
-    public void onLowMemory() {
-        super.onLowMemory();
-    }*/
-=======
->>>>>>> 892a6ea85f5ef4ca25af1ff94e4eb403ff3a9a8f
 }

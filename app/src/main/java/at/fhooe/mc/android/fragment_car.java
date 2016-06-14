@@ -1,10 +1,7 @@
 package at.fhooe.mc.android;
 
 import android.app.Fragment;
-import android.content.Context;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -29,9 +26,9 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
     GoogleMap mMap;
     LocationRequest mLocationRequest;
     GoogleApiClient mGoogleApiClient;
-    Marker carLocation;
-    Marker userLocation;
-    boolean set = false;
+    public static Marker carLocation;
+    public static Marker userLocation;
+    public static boolean SAVE;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,7 +51,6 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
                     .addApi(LocationServices.API)
                     .build();
         }
-
 
         mLocationRequest = new LocationRequest().setInterval(1000);
         mView.onCreate(savedInstanceState);
@@ -102,7 +98,13 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+        LatLng latLng = new LatLng(0, 0);
+        MarkerOptions userOptions = new MarkerOptions().position(latLng).title("My Position");
+        MarkerOptions carOptions = new MarkerOptions().position(latLng).title("Car Position");
+        userLocation = mMap.addMarker(userOptions);
+        userLocation.setVisible(false);
+        carLocation = mMap.addMarker(carOptions);
+        carLocation.setVisible(false);
 
         mGoogleApiClient.connect();
     }
@@ -110,59 +112,7 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
-        // Acquire a reference to the system Location Manager
-        LocationManager locationManager = (LocationManager) this.getActivity().getSystemService(Context.LOCATION_SERVICE);
-
-        LocationListener ll = new LocationListener() {
-            @Override
-            public void onLocationChanged(Location location) {
-                if(!set) {
-                    LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-
-                    if(carLocation == null) {
-                        MarkerOptions carOptions = new MarkerOptions().position(latLng).title("Car Position");
-                        carLocation = mMap.addMarker(carOptions);
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
-                    }
-
-                    else {
-                        carLocation.setPosition(latLng);
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-                    }
-                }
-
-                else {
-                    LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-
-                    if(userLocation == null) {
-                        MarkerOptions userOptions = new MarkerOptions().position(latLng).title("My Position");
-                        userLocation = mMap.addMarker(userOptions);
-                    }
-
-                    else {
-                        userLocation.setPosition(latLng);
-                    }
-                }
-            }
-
-            @Override
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-
-            }
-
-            @Override
-            public void onProviderEnabled(String provider) {
-
-            }
-
-            @Override
-            public void onProviderDisabled(String provider) {
-
-            }
-        };
-
-        // Register the listener with the Location Manager to receive location updates
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, ll);
+        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
     }
 
     @Override
@@ -177,6 +127,19 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
 
     @Override
     public void onLocationChanged(Location location) {
+        if(!SAVE) {
+            LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
 
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
+            carLocation.setVisible(true);
+            carLocation.setPosition(latLng);
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        }
+
+        else {
+            LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+            userLocation.setVisible(true);
+            userLocation.setPosition(latLng);
+        }
     }
 }

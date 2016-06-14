@@ -5,4 +5,6 @@
     <string name="where_is_my_bike">Wo ist mein Fahrrad?</string>
     <string name="action_settings">Einstellungen</string>
     <string name="hint_car">Notiere Infos wie welche Parkgarage, Parkebene, Sektion, ...</string>
+    <string name="action_save">Speichern</string>
+    <string name="action_delete">Löschen</string>
 </resources>
