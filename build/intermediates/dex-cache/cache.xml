@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="9819419ce8d79f3f81a0fc70f9345ac8c843af9c">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-9.0.2_4ad88fd34eef5fdb0e6c18be4a08f35bb31cb6f5/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="829c6e46cb221c2102801221c648b77113743e81">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-9.0.2_79a7977af1f4cd4159b30377ef8d28b10c72358a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="20e1a0f0de6276a5f36062b655f8b20f8cc00cc4">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.0.2_ef37eabb03a59e120f9cfa1ca0605f880fcf609d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.0.2_d8278198a766766ff30e13d2b1aec4bfd5a319af/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.0.0_e75e676cf3fbc374c4e93283e22e05cc9eec4c9a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="4ec890171a97b5ab98292f131aa784e0f3792c73">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-9.0.2_cbeebb98bb2ddf99df2e55e712f9ce60dea6ef3f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="a511c684ea4c2cf31a3377d51e7677cb76696e07">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.0.2_3d0731cc07a3cf6903f2801f3104e385c959dd1d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="568d5bda0b4d51f90d978ace369bb9ad024d2057">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-common-9.0.2_949e9bfbf879a3bb69bc6260a32c42ad451ec084/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="cf16220db9128d91a215aedc739584181d5ca6a4">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-9.0.2_b86888e8d29f29c828252725eb5f4c18361c9e90/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="f399a2fde7888450cadcaec4974bfd169d8cce43">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-api-9.0.2_56415a20ebd5373af18192873c28b87a3ba68683/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-23.0.0_cd438f66d35da1e9c82f1671088e20c137692fb2/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="604ecf403feb0084dc6d0c12f1677a490cf45e4c">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-9.0.2_e6fca9bd097b915a1f35d2559082e4af79ee195e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.0.2_9e97704f9340de77cee1ef128c0c50b9013f9bda/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="c96952c162c9f6076f44c5939982cb35491442ea">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-9.0.2_950a97e35e5a06c0927c611f2114a8d2ec90f96c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="764d32faf85bc6f7bd2cdcb3a70a482c1884fdd2">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-9.0.2_a7b2452fe9497d7146d327964fcbf24a9bb6f409/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="fe5b47e764869f1076cb9cfe12801ed2ef4e9117">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-9.0.2_47d6c583c22d952866b22cc1fb4e389812a67dba/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="ec003703869a3dde117cfb41a67dccbc038a4493">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_cd517e2c266e67c2972831718af102a4d9109976/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="92a1d5f71b0fc8938f1d3f2e6ef984b52b894b4d">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.0.2_df8d21e70b94705746ed0e2320a740005455ca04/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="b6af089f583d547bcffc0689b2e80bc7aaa54b15">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-9.0.2_753de0fc36e12b1d4087b9e494b30f93dde2f370/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="7e52b440a26498c56b4f263e215223b5451c955e">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-9.0.2_8662f6203f6f556e563af3f69241c985796aebd2/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="922c24fbfc4247947fcfaf2b95f295a16a8c3d17">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-9.0.2_63fca2c11ff39df2ece1f84fffe0c3ee697e013a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="6c58c14d15602fea2c50138c73bb107e8b832b62">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-impl-9.0.2_a6e727f9874cf8d5accf3c0bbca740bed443bf4a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="060a7157438a0b1b0706b99c430fb3ecbc5a79a4">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-9.0.2_8925d378014f9cc964a7173b243260a0fb30359d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="fa472b7cbd3897bf6bed6068ac0b00e494987688">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-9.0.2_07c53d8ce9a653930638794bfb7c9489a27bd962/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="f4fb6981392ca7680d02fd57d26d6124c141d9d9">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-9.0.2_c4e3916979726ea650361e2b1e821bf918c48ad1/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="f824aa2ebe939dc12ba4ae9697171668785326ea">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a037984aae143a523c01422d9e05bee174feb0df/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="b3d0809a742c5f768c6aa9efc6decd5c1d6cd227">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.0.2_2ac46e08d8732c7f9b58dd924c78b1d2d9890034/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="a45bc1ed812137b21dddd1cedaa3712b308f0b3f">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-9.0.2_60696f90962efcca27dec000195952b73cc60931/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="e11da70cff6a544a45cdc21f419802d9bb9043ac">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-9.0.2_2d01f969c3331cba19ecdf8aea271fbca2f5372e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_fda570999cfd0b7cab44805c2c153a82427afba1/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_019988b983d733facb82c3ab58ad0a9d6b5bfb1b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_9c62716e6b3eb64c472c35197d04cf94e85e0dfc/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="b8e0372ca6dc89ac4fe22b76eeea4f68ece435b8">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-9.0.2_8255ad5390ea0a930ca73df93395932fa447807c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="cd4c7c54e15d9ccbc448384fa2c4684d69ca73f0">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-9.0.2_7eb8fa112e54eaff05b7edbde3d77bf0cb2d547b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.0.2_fed2d06515e47af54ae5fb6b8dce54a9d0201946/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_7cb3ac3234a8d7e713be004ba5856fc0d1970751/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_c559166d7400a0ca685e7308e2de1b554651349a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="0c835e9f3875cf245877c9b17d1c69bc98f16057">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-9.0.2_930cfa9f06ff20a3a9cfe964761439d9fe5ad104/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="e6970f0554f9508c041f1f6960af15cc888c9f35">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-9.0.2_5a06e6e8777b2dbd0a2324a240c8914fdd666762/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="f2774b1e02e5fbc524590311a744263c3b152d63">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-9.0.2_b62e202a1f68bb0c769b307297a4d5a7287adb15/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.0.2_a1a6914bb38517d1824b3c634fbb02e0af18fde9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="a498fab72f8663c26fbf3d4496eb6b673b17bcae">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-9.0.2_d9a5e018340b05a0cf5018c2277c7dfb7534c8a2/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="79e298d7fed2fcada58da7032d07d34ee198a545">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-module-9.0.2_99c2c683eb10b1b82df8982ca4ebb66202f6d30d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="51a11c41a08f099a204e1b8dcc04f27217de50ec">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.0.2_657205b302cb0fb292d48cc87cfb87c7f4ac4d59/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="d900f2a1ff098cac8befe6c023d723e9afb154be">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-9.0.2_723ab0b7d1cbc1a4605663fed2e29e7fa4972457/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="8c0fc9b1ea0bac0cb31d60c8b1bf2feb0518e3a9">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-9.0.2_64d2f3b6f3a1981f6ab6e2b8eb98a40b023448b0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="d9ea4cdaafa29ec4651d6e4715788d3fcaa7b913">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-9.0.2_bb5671c9133d71107366e7d6dc81feaa32aeb64a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="6ff48ef26bc539c78af4aa061cb9bad6abcbf5e8">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-9.0.2_b02caa7a77bc531bafe7029ec8019771d74b62e6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_229b1ab5b22c4a6f325dbc624c51eff3f9f5312c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="bc156efaaee99f1ef6bf471347373a4cbb28e2a1">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-9.0.2_1662cd90676d15f2a59b9eea33da3b87ef463377/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="2ab5be19bbd34bae74662ea6b2d4451314d92d97">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-9.0.2_e0b32597e895e4a7393b5f213e31a20dc1f5d76a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="143813b18381b28de1e04aae1d92fcb374a0add9">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-9.0.2_53f3893362e13a222fe4b05393aa0cbeccef81f6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="53f10fcd322a3931495d6ca2078a81f4957cdbce">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-9.0.2_cfcf27b21028372da056e6ae6b7acc06a767c824/classes.dex" />
+    </item>
+
+</items>
