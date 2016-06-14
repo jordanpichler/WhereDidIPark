@@ -1,10 +1,14 @@
 package at.fhooe.mc.android;
 
+<<<<<<< HEAD
 import android.content.Intent;
 import android.location.Location;
+=======
+>>>>>>> 892a6ea85f5ef4ca25af1ff94e4eb403ff3a9a8f
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
+<<<<<<< HEAD
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,6 +18,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
+=======
+>>>>>>> 892a6ea85f5ef4ca25af1ff94e4eb403ff3a9a8f
 
 public class where_car extends FragmentActivity implements View.OnClickListener {
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -27,6 +33,7 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
         car_photo.setOnClickListener(this);
 
     }
+<<<<<<< HEAD
 
     @Override
     public void onClick(View _v) {
@@ -73,4 +80,6 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
     public void onLowMemory() {
         super.onLowMemory();
     }*/
+=======
+>>>>>>> 892a6ea85f5ef4ca25af1ff94e4eb403ff3a9a8f
 }
