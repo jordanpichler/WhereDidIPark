@@ -24,7 +24,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class fragment_car extends Fragment implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+public class fragment_car extends Fragment implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener {
     MapView mView;
     GoogleMap mMap;
     LocationRequest mLocationRequest;
@@ -102,15 +102,7 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        Location location = LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
-
-        //mMap.getMyLocation()
-        if(carLocation == null) {
-            LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-            MarkerOptions carOptions = new MarkerOptions().position(latLng).title("Car Position");
-            carLocation = mMap.addMarker(carOptions);
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
-        }
+        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
 
         mGoogleApiClient.connect();
     }
@@ -180,6 +172,11 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
 
     }
 }
