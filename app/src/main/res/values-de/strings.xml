@@ -9,4 +9,5 @@
     <string name="action_delete">Löschen</string>
     <string name="car_take_photo">Neues Foto machen</string>
     <string name="title_activity_test_map">Karte</string>
+    <string name="hint_bike">Notiere wie du dein Fahrrad geparkt hast. zB. abgesperrt, freistehend, auf einem Stand, ...</string>
 </resources>
