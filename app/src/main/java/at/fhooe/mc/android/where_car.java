@@ -18,7 +18,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,12 +35,11 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
     public boolean SAVE;
     private String TAG = "Where is my Car";
     private ImageView mCarImage;
+    private EditText mNotes;
     private Bitmap mCarBitmap;
-
-    private Bitmap mImageBitmap;
-    private static File mImage = null;
-    private static String mCurrentPhotoPath = null;
     public String KEY_IMG_PATH = "WhereDidIParkCARKEYImgPath";
+    public String KEY_NOTES = "WhereDidIParkCARKEYNotes";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,13 +55,22 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
         Button car_take_photo = (Button) findViewById(R.id.car_take_photo);
         car_take_photo.setOnClickListener(this);
 
-        this.mCarImage = (ImageView) findViewById(R.id.car_photo);
-        this.mCarImage.setOnClickListener(this);
+        mCarImage = (ImageView) findViewById(R.id.car_photo);
+        mCarImage.setOnClickListener(this);
 
+        mNotes = (EditText) findViewById(R.id.car_notes);
+
+        //Recreate Saved Instance
         SharedPreferences sp = getPreferences(Context.MODE_PRIVATE);
+
+        //--Image
         String imgPath = sp.getString(KEY_IMG_PATH, null);
         mCarBitmap = loadImageFromStorage(imgPath);
         mCarImage.setImageBitmap(mCarBitmap);
+
+        //--Notes
+        String notesContent = sp.getString(KEY_NOTES, null);
+        mNotes.setText(notesContent);
     }
 
     @Override
@@ -71,22 +81,6 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
                 if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
                     startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
                 }
-               /* Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                if (cameraIntent.resolveActivity(getPackageManager()) != null) {
-                    // Create the File where the photo should go
-                    if (mImage == null) {
-                        try {
-                            mImage = createImageFile();
-                        } catch (IOException ex) {
-                            // Error occurred while creating the File
-                            Log.i(TAG, "IOException while creating File");
-                        }
-                    }
-                    // Continue only if the File was successfully created
-                        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mImage));
-                        startActivityForResult(cameraIntent, REQUEST_IMAGE_CAPTURE);
-
-                }*/
             }
             break;
             case R.id.car_photo: {
@@ -119,6 +113,8 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
                 Log.i(TAG, "cleared Shared Prefs");
 
                 mCarImage.setImageBitmap(null);
+                mNotes.setText(null);
+
 
             } break;
 
@@ -129,9 +125,15 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
 
                 String imagePath = saveToInternalStorage(mCarBitmap);
                 edit.putString(KEY_IMG_PATH, imagePath);
+
+                String notesContent = mNotes.getText().toString();
+                edit.putString(KEY_NOTES, notesContent);
+
                 Log.i(TAG, "saved to Shared Prefs");
 
                 edit.commit();
+                mCarBitmap = null;
+                Toast.makeText(this, "All Saved! :)", Toast.LENGTH_SHORT).show();
             } break;
 
             default: {
@@ -149,69 +151,6 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
             mCarBitmap = (Bitmap) extras.get("data");
             mCarImage.setImageBitmap(mCarBitmap);
         }
-
-//                mCarImage.setImageBitmap(
-//                        decodeSampledBitmapFromFile(300, 500));
-//                mImageBitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), Uri.parse(mCurrentPhotoPath));
-//                int nh = (int) ( mImageBitmap.getHeight() * (512.0 / mImageBitmap.getWidth()) );
-//                Bitmap scaled = Bitmap.createScaledBitmap(mImageBitmap, 512, nh, true);
-//                mCarImage.setImageBitmap(scaled);
-//                //mCarImage.setImageBitmap(mImageBitmap);
-    }
-
-
-
-    private File createImageFile() throws IOException {
-        // Create an image file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "JPEG_" + timeStamp + "_";
-        File storageDir = getExternalFilesDir(null);
-        File image = File.createTempFile(
-                imageFileName,  // prefix
-                ".jpg",         // suffix
-                storageDir      // directory
-        );
-
-        // Save a file: path for use with ACTION_VIEW intents
-        this.mCurrentPhotoPath = "file:" + image.getAbsolutePath();
-        return image;
-    }
-
-    public static Bitmap decodeSampledBitmapFromFile(int reqWidth, int reqHeight) {
-        // First decode with inJustDecodeBounds=true to check dimensions
-        final BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(mCurrentPhotoPath, options);
-
-        // Calculate inSampleSize
-        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
-
-        // Decode bitmap with inSampleSize set
-        options.inJustDecodeBounds = false;
-        return BitmapFactory.decodeFile(mCurrentPhotoPath, options);
-    }
-
-    public static int calculateInSampleSize(
-            BitmapFactory.Options options, int reqWidth, int reqHeight) {
-        // Raw height and width of image
-        final int height = options.outHeight;
-        final int width = options.outWidth;
-        int inSampleSize = 1;
-
-        if (height > reqHeight || width > reqWidth) {
-
-            final int halfHeight = height / 2;
-            final int halfWidth = width / 2;
-
-            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-            // height and width larger than the requested height and width.
-            while ((halfHeight / inSampleSize) > reqHeight
-                    && (halfWidth / inSampleSize) > reqWidth) {
-                inSampleSize *= 2;
-            }
-        }
-
-        return inSampleSize;
     }
 
     @Override
