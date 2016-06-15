@@ -102,14 +102,13 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mGoogleApiClient.connect();
+    }
 
+
+    @Override
+    public void onConnected(/*@Nullable*/ Bundle bundle) {
         sp = getActivity().getPreferences(Context.MODE_PRIVATE);
-
-        LatLng latLng = new LatLng(0, 0);
-        MarkerOptions userOptions = new MarkerOptions()
-                .position(latLng)
-                .title("My Position")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
 
         float lati = sp.getFloat(KEY_CAR_LATITUDE, -1);
         float longi = sp.getFloat(KEY_CAR_LONGITUDE, -1);
@@ -129,19 +128,13 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(loc.getLatitude(), loc.getLongitude()), 18));
 
             carOptions = new MarkerOptions()
-                    .position(latLng)
+                    .position(new LatLng(loc.getLatitude(), loc.getLongitude()))
                     .title("Car Position");
         }
 
         carLocation = mMap.addMarker(carOptions);
         carLocation.setVisible(false);
 
-        mGoogleApiClient.connect();
-    }
-
-
-    @Override
-    public void onConnected(/*@Nullable*/ Bundle bundle) {
         LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
     }
 
@@ -164,7 +157,7 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
 
 
         if(lati == -1 && longi == -1) { // Not saved
-            carLocation.setVisible(true);
+            carLocation.setVisible(false);
             carLocation.setPosition(latLng);
             mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
         }
