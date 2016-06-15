@@ -53,8 +53,7 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
         Button car_take_photo = (Button) findViewById(R.id.car_take_photo);
         car_take_photo.setOnClickListener(this);
 
-        mCarImage = (ImageView) findViewById(R.id.car_photo);
-        mCarImage.setOnClickListener(this);
+
 
         mNotes = (EditText) findViewById(R.id.car_notes);
 
@@ -81,10 +80,7 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
                 }
             }
             break;
-            case R.id.car_photo: {
-                //TODO: View FUll Size Image
-            }
-            break;
+
             default: {
                 Log.e(TAG, "unexpected onClick ID encountered");
             }
