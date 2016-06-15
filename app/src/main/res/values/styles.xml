@@ -9,6 +9,8 @@
         <item name="android:colorForeground">@color/switch_thumb_material_light</item>
         <item name="android:navigationBarColor">@android:color/holo_green_dark</item>
         <item name="android:windowBackground">@color/material_grey_300</item>
+        <item name="android:colorButtonNormal">@color/common_plus_signin_btn_text_dark_disabled</item>
+        <item name="android:panelBackground">@color/common_plus_signin_btn_text_dark_disabled</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
-
 </resources>
