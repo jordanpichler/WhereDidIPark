@@ -111,7 +111,7 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_delete : {
-                fragment_car.carLocation.setVisible(true);
+                fragment_car.carLocation.setVisible(false);
 
                 SharedPreferences.Editor edit = fragment_car.sp.edit();
                 edit.clear();
