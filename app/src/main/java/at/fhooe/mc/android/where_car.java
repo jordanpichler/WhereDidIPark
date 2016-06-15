@@ -2,7 +2,9 @@ package at.fhooe.mc.android;
 
 
 import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
@@ -51,13 +53,19 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_delete : {
-                fragment_car.SAVE = false;
                 fragment_car.userLocation.setVisible(false);
                 fragment_car.carLocation.setVisible(true);
+
+                SharedPreferences.Editor edit = fragment_car.sp.edit();
+                edit.clear();
+                edit.commit();
             } break;
 
             case R.id.action_save : {
-                fragment_car.SAVE = true;
+                SharedPreferences.Editor edit = fragment_car.sp.edit();
+                edit.putFloat(fragment_car.KEY_CAR_LONGITUDE, (float) fragment_car.carLocation.getPosition().longitude);
+                edit.putFloat(fragment_car.KEY_CAR_LATITUDE, (float) fragment_car.carLocation.getPosition().latitude);
+                edit.commit();
             } break;
 
             default : {

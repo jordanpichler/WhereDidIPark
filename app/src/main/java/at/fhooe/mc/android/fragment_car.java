@@ -1,6 +1,8 @@
 package at.fhooe.mc.android;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -17,7 +19,6 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -30,7 +31,9 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
     GoogleApiClient mGoogleApiClient;
     public static Marker carLocation;
     public static Marker userLocation;
-    public static boolean SAVE;
+    public static SharedPreferences sp;
+    public static String KEY_CAR_LONGITUDE = "WhereDidIParkCARKEYlongi";
+    public static String KEY_CAR_LATITUDE = "WhereDidIParkCARKEYlati";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,7 +57,7 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
                     .build();
         }
 
-        mLocationRequest = new LocationRequest().setInterval(10000);
+        mLocationRequest = new LocationRequest().setInterval(1000).setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         mView.onCreate(savedInstanceState);
         mView.getMapAsync(this);
         return v;
@@ -100,16 +103,30 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        sp = getActivity().getPreferences(Context.MODE_PRIVATE);
+
         LatLng latLng = new LatLng(0, 0);
         MarkerOptions userOptions = new MarkerOptions()
                 .position(latLng)
                 .title("My Position")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
 
-        MarkerOptions carOptions = new MarkerOptions()
-                .position(latLng)
-                .title("Car Position");
+        float lati = sp.getFloat(KEY_CAR_LATITUDE, -1);
+        float longi = sp.getFloat(KEY_CAR_LONGITUDE, -1);
 
+        MarkerOptions carOptions;
+
+        if(lati != -1 && longi != -1) {
+            carOptions = new MarkerOptions()
+                    .position(new LatLng(lati, longi))
+                    .title("Car Position");
+        }
+
+        else {
+            carOptions = new MarkerOptions()
+                    .position(latLng)
+                    .title("Car Position");
+        }
         userLocation = mMap.addMarker(userOptions);
         userLocation.setVisible(false);
 
@@ -137,17 +154,20 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
 
     @Override
     public void onLocationChanged(Location location) {
-        if(!SAVE) {
-            LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+        float lati = sp.getFloat(KEY_CAR_LATITUDE, -1);
+        float longi = sp.getFloat(KEY_CAR_LONGITUDE, -1);
 
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
+        LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
+
+        if(lati == -1 && longi == -1) { // Not saved
             carLocation.setVisible(true);
+            userLocation.setVisible(false);
             carLocation.setPosition(latLng);
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         }
 
-        else {
-            LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+        else { // saved
+            carLocation.setVisible(true);
             userLocation.setVisible(true);
             userLocation.setPosition(latLng);
         }
