@@ -7,7 +7,6 @@ import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -21,14 +20,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 
 public class where_car extends FragmentActivity implements View.OnClickListener {
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -52,9 +49,7 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
 
         Button car_take_photo = (Button) findViewById(R.id.car_take_photo);
         car_take_photo.setOnClickListener(this);
-
         mCarImage = (ImageView) findViewById(R.id.car_photo);
-
         mNotes = (EditText) findViewById(R.id.car_notes);
 
         //Recreate Saved Instance
@@ -80,7 +75,6 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
                 }
             }
             break;
-
             default: {
                 Log.e(TAG, "unexpected onClick ID encountered");
             }
@@ -106,6 +100,7 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
                 edit.commit();
                 Log.i(TAG, "cleared Shared Prefs");
 
+                //clear Widgets
                 mCarImage.setImageBitmap(null);
                 mNotes.setText(null);
 
