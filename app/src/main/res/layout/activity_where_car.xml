@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="at.fhooe.mc.android.where_car">
+    tools:context=".ActivityCar">
 
     <LinearLayout
         android:orientation="vertical"
@@ -12,7 +12,7 @@
         android:layout_gravity="center">
 
         <fragment
-            class="at.fhooe.mc.android.fragment_car"
+            class="at.fhooe.mc.android.FragmentCar"
             android:id="@+id/fragment_map"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

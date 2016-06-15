@@ -22,7 +22,7 @@ package="at.fhooe.mc.android">
         </intent-filter>
     </activity>
     <activity
-        android:name=".where_car"
+        android:name=".ActivityCar"
         android:screenOrientation="portrait"
         android:parentActivityName=".MainActivity">
         <meta-data
@@ -31,7 +31,7 @@ package="at.fhooe.mc.android">
     </activity>
 
     <activity
-        android:name=".where_bike"
+        android:name=".ActivityBike"
         android:parentActivityName=".MainActivity"
         android:screenOrientation="portrait">
         <meta-data

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="at.fhooe.mc.android.where_bike">
+    tools:context=".ActivityBike">
 
     <LinearLayout
         android:orientation="vertical"
@@ -13,7 +13,7 @@
         android:layout_gravity="center">
 
         <fragment
-            class="at.fhooe.mc.android.fragment_bike"
+            class="at.fhooe.mc.android.FragmentBike"
             android:id="@+id/bike_fragment_map"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
