@@ -40,7 +40,7 @@ public class ActivityCar extends FragmentActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_where_car);;
+        setContentView(R.layout.activity_where_car);
 
         ActionBar actionBar = getActionBar();
         actionBar.setTitle("Your Car");
