@@ -21,6 +21,7 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -30,7 +31,6 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
     LocationRequest mLocationRequest;
     GoogleApiClient mGoogleApiClient;
     public static Marker carLocation;
-    public static Marker userLocation;
     public static SharedPreferences sp;
     public static String KEY_CAR_LONGITUDE = "WhereDidIParkCARKEYlongi";
     public static String KEY_CAR_LATITUDE = "WhereDidIParkCARKEYlati";
@@ -120,15 +120,18 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
             carOptions = new MarkerOptions()
                     .position(new LatLng(lati, longi))
                     .title("Car Position");
+
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lati, longi), 18));
         }
 
         else {
+            Location loc = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(loc.getLatitude(), loc.getLongitude()), 18));
+
             carOptions = new MarkerOptions()
                     .position(latLng)
                     .title("Car Position");
         }
-        userLocation = mMap.addMarker(userOptions);
-        userLocation.setVisible(false);
 
         carLocation = mMap.addMarker(carOptions);
         carLocation.setVisible(false);
@@ -158,18 +161,22 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
         float longi = sp.getFloat(KEY_CAR_LONGITUDE, -1);
 
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
+
 
         if(lati == -1 && longi == -1) { // Not saved
             carLocation.setVisible(true);
-            userLocation.setVisible(false);
             carLocation.setPosition(latLng);
+            mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
         }
 
         else { // saved
+            LatLngBounds.Builder latLngBuilder = new LatLngBounds.Builder();
+            latLngBuilder.include(new LatLng(lati, longi));
+            latLngBuilder.include(new LatLng(location.getLatitude(), location.getLongitude()));
+            LatLngBounds bounds = latLngBuilder.build();
+            mMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 50));
             carLocation.setVisible(true);
-            userLocation.setVisible(true);
-            userLocation.setPosition(latLng);
+            mMap.setMyLocationEnabled(true);
         }
     }
 }
