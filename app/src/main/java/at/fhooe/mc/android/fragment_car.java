@@ -17,6 +17,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -52,7 +54,7 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
                     .build();
         }
 
-        mLocationRequest = new LocationRequest().setInterval(1000);
+        mLocationRequest = new LocationRequest().setInterval(10000);
         mView.onCreate(savedInstanceState);
         mView.getMapAsync(this);
         return v;
@@ -99,10 +101,18 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
         mMap = googleMap;
 
         LatLng latLng = new LatLng(0, 0);
-        MarkerOptions userOptions = new MarkerOptions().position(latLng).title("My Position");
-        MarkerOptions carOptions = new MarkerOptions().position(latLng).title("Car Position");
+        MarkerOptions userOptions = new MarkerOptions()
+                .position(latLng)
+                .title("My Position")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
+
+        MarkerOptions carOptions = new MarkerOptions()
+                .position(latLng)
+                .title("Car Position");
+
         userLocation = mMap.addMarker(userOptions);
         userLocation.setVisible(false);
+
         carLocation = mMap.addMarker(carOptions);
         carLocation.setVisible(false);
 
