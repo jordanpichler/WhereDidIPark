@@ -126,6 +126,7 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
                 SharedPreferences.Editor edit = fragment_car.sp.edit();
                 edit.putFloat(fragment_car.KEY_CAR_LONGITUDE, (float) fragment_car.carLocation.getPosition().longitude);
                 edit.putFloat(fragment_car.KEY_CAR_LATITUDE, (float) fragment_car.carLocation.getPosition().latitude);
+                fragment_car.carLocation.setVisible(true);
 
                 String imagePath = saveToInternalStorage(mCarBitmap);
                 edit.putString(KEY_IMG_PATH, imagePath);
