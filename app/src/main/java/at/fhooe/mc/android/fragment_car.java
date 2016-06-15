@@ -103,7 +103,6 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
     public void onMapReady(GoogleMap googleMap) {
         zoom = false;
         mMap = googleMap;
-        mGoogleApiClient.connect();
 
         sp = getActivity().getPreferences(Context.MODE_PRIVATE);
 
@@ -118,6 +117,7 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
                     .position(new LatLng(lati, longi))
                     .title("Car Position");
         } else {
+            zoom = false;
             carOptions = new MarkerOptions()
                     .position(new LatLng(0, 0))
                     .title("Car Position");
@@ -125,7 +125,7 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
 
         carLocation = mMap.addMarker(carOptions);
         carLocation.setVisible(false);
-        mMap.setMyLocationEnabled(true);
+        mGoogleApiClient.connect();
     }
 
     @Override
@@ -152,7 +152,6 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
 
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
 
-
         if(lati == -1 && longi == -1) { // Not saved
             carLocation.setVisible(false);
             carLocation.setPosition(latLng);
@@ -175,5 +174,7 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
             mMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 50));
             carLocation.setVisible(true);
         }
+
+        mMap.setMyLocationEnabled(true);
     }
 }

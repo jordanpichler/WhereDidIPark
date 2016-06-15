@@ -32,7 +32,6 @@ import java.util.Date;
 
 public class where_car extends FragmentActivity implements View.OnClickListener {
     static final int REQUEST_IMAGE_CAPTURE = 1;
-    public boolean SAVE;
     private String TAG = "Where is my Car";
     private ImageView mCarImage;
     private EditText mNotes;
@@ -45,8 +44,6 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_where_car);;
-
-        SAVE = false;
 
         ActionBar actionBar = getActionBar();
         actionBar.setTitle("Your Car");

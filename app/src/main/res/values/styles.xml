@@ -1,6 +1,5 @@
 <resources>
     <!-- Base application theme. -->
-    <resources>
         <style name="AppTheme" parent="android:Theme.Material.Light">
             <item name="android:actionBarStyle">@style/ActionBar</item>
             <item name="android:colorPrimaryDark">#9ACD32</item>
@@ -20,7 +19,6 @@
             <item name="android:background">#9ACD32</item>
             <item name="android:actionBarDivider">@null</item>
             <item name="android:titleTextStyle">@style/ActionBarTextStyle</item>
-            <item name="android:text">TExt</item>
         </style>
 
         <style name="ActionBarTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
