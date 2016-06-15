@@ -7,4 +7,6 @@
     <string name="hint_car">Notiere Infos wie welche Parkgarage, Parkebene, Sektion, ...</string>
     <string name="action_save">Speichern</string>
     <string name="action_delete">Löschen</string>
+    <string name="car_take_photo">Neues Foto machen</string>
+    <string name="title_activity_test_map">Karte</string>
 </resources>
