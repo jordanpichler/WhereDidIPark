@@ -9,7 +9,6 @@
     <string name="action_save">Save</string>
     <string name="action_delete">Delete</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="car_take_photo">Take new photo</string>
+    <string name="hint_bike">Enter notes such as how you last parked your bike (at a stand, locked up, free standing, ...)</string>
 </resources>
