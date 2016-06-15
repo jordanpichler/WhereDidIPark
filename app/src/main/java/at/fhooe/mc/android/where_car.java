@@ -2,6 +2,8 @@ package at.fhooe.mc.android;
 
 
 import android.app.ActionBar;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -19,6 +21,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -28,9 +33,12 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
     public boolean SAVE;
     private String TAG = "Where is my Car";
     private ImageView mCarImage;
+    private Bitmap mCarBitmap;
+
     private Bitmap mImageBitmap;
     private static File mImage = null;
     private static String mCurrentPhotoPath = null;
+    public String KEY_IMG_PATH = "WhereDidIParkCARKEYImgPath";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +57,10 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
         this.mCarImage = (ImageView) findViewById(R.id.car_photo);
         this.mCarImage.setOnClickListener(this);
 
+        SharedPreferences sp = getPreferences(Context.MODE_PRIVATE);
+        String imgPath = sp.getString(KEY_IMG_PATH, null);
+        mCarBitmap = loadImageFromStorage(imgPath);
+        mCarImage.setImageBitmap(mCarBitmap);
     }
 
     @Override
@@ -104,12 +116,21 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
                 SharedPreferences.Editor edit = fragment_car.sp.edit();
                 edit.clear();
                 edit.commit();
+                Log.i(TAG, "cleared Shared Prefs");
+
+                mCarImage.setImageBitmap(null);
+
             } break;
 
             case R.id.action_save : {
                 SharedPreferences.Editor edit = fragment_car.sp.edit();
                 edit.putFloat(fragment_car.KEY_CAR_LONGITUDE, (float) fragment_car.carLocation.getPosition().longitude);
                 edit.putFloat(fragment_car.KEY_CAR_LATITUDE, (float) fragment_car.carLocation.getPosition().latitude);
+
+                String imagePath = saveToInternalStorage(mCarBitmap);
+                edit.putString(KEY_IMG_PATH, imagePath);
+                Log.i(TAG, "saved to Shared Prefs");
+
                 edit.commit();
             } break;
 
@@ -125,8 +146,8 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            mCarImage.setImageBitmap(imageBitmap);
+            mCarBitmap = (Bitmap) extras.get("data");
+            mCarImage.setImageBitmap(mCarBitmap);
         }
 
 //                mCarImage.setImageBitmap(
@@ -193,5 +214,49 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
         return inSampleSize;
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 
+    private String saveToInternalStorage(Bitmap bitmapImage){
+        ContextWrapper cw = new ContextWrapper(getApplicationContext());
+        // path to /data/data/yourapp/app_data/imageDir
+        File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
+        // Create imageDir
+        File mypath=new File(directory,"recoveredPhoto.jpg");
+
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(mypath);
+            // Use the compress method on the BitMap object to write image to the OutputStream
+            bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fos);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                fos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        Log.i(TAG, "created Path String for Photo (Shared Prefs)");
+        return directory.getAbsolutePath();
+    }
+
+    private Bitmap loadImageFromStorage(String path)
+    {
+        try {
+            File f = new File(path, "recoveredPhoto.jpg");
+            Bitmap b = BitmapFactory.decodeStream(new FileInputStream(f));
+            Log.i(TAG, "retrieved Photo Path (Shared Prefs): " + path);
+            return b;
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+            return null;
+        }
+
+    }
 }
