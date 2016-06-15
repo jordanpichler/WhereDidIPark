@@ -7,7 +7,6 @@ import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -27,8 +26,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class where_bike extends FragmentActivity implements View.OnClickListener {
     static final int REQUEST_IMAGE_CAPTURE = 1;
