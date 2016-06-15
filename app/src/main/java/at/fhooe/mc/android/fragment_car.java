@@ -4,9 +4,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.location.Location;
-import android.os.Bundle;/*
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;*/
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -114,30 +112,28 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
 
         MarkerOptions carOptions;
 
-        if(lati != -1 && longi != -1) {
+        if (lati != -1 && longi != -1) {
             zoom = true;
             carOptions = new MarkerOptions()
                     .position(new LatLng(lati, longi))
                     .title("Car Position");
-        }
-
-        else {
+        } else {
             carOptions = new MarkerOptions()
                     .position(new LatLng(0, 0))
                     .title("Car Position");
-
-            //mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(loc.getLatitude(), loc.getLongitude()), 18));
         }
 
         carLocation = mMap.addMarker(carOptions);
         carLocation.setVisible(false);
+        mMap.setMyLocationEnabled(true);
     }
-
 
     @Override
     public void onConnected(/*@Nullable*/ Bundle bundle) {
         LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
     }
+
+
 
     @Override
     public void onConnectionSuspended(int i) {
@@ -155,7 +151,7 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
         float longi = sp.getFloat(KEY_CAR_LONGITUDE, -1);
 
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-        mMap.setMyLocationEnabled(true);
+
 
         if(lati == -1 && longi == -1) { // Not saved
             carLocation.setVisible(false);
