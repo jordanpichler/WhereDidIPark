@@ -43,13 +43,14 @@ public class where_car extends FragmentActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_where_car);
+        setContentView(R.layout.activity_where_car);;
 
         SAVE = false;
 
         ActionBar actionBar = getActionBar();
         actionBar.setTitle("Your Car");
         actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayShowTitleEnabled(true);
 
         Button car_take_photo = (Button) findViewById(R.id.car_take_photo);
         car_take_photo.setOnClickListener(this);

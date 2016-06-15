@@ -14,6 +14,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle _savedInstanceState) {
         super.onCreate(_savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.getActionBar().setDisplayShowTitleEnabled(true);
 
         ImageView iv = (ImageView) findViewById(R.id.main_where_is_car);
         iv.setOnClickListener(this);

@@ -9,5 +9,6 @@ public class where_bike extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_where_bike);
+        this.getActionBar().setDisplayShowTitleEnabled(true);
     }
 }
