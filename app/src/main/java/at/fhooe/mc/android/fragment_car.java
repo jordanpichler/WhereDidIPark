@@ -132,6 +132,7 @@ public class fragment_car extends Fragment implements OnMapReadyCallback, Google
 
         carLocation = mMap.addMarker(carOptions);
         carLocation.setVisible(false);
+        mMap.setMyLocationEnabled(true);
 
         mGoogleApiClient.connect();
     }
