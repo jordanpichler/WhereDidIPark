@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.0.2/jars/classes.jar"
-        jumboMode="true"
-        revision="21.1.2"
-        sha1="20e1a0f0de6276a5f36062b655f8b20f8cc00cc4">
-        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.0.2_ef37eabb03a59e120f9cfa1ca0605f880fcf609d/classes.dex" />
-    </item>
-    <item
         jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
         jumboMode="true"
         revision="21.1.2"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
         <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_fda570999cfd0b7cab44805c2c153a82427afba1/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="20e1a0f0de6276a5f36062b655f8b20f8cc00cc4">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.0.2_ef37eabb03a59e120f9cfa1ca0605f880fcf609d/classes.dex" />
     </item>
     <item
         jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
@@ -37,13 +37,6 @@
         <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.0.2_d8278198a766766ff30e13d2b1aec4bfd5a319af/classes.dex" />
     </item>
     <item
-        jar="/Users/Jordan/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
-        jumboMode="true"
-        revision="21.1.2"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_978f75ae2334fb36acf9cc7f2359a2287c3ca05b/classes.dex" />
-    </item>
-    <item
         jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/jars/classes.jar"
         jumboMode="true"
         revision="21.1.2"
@@ -51,18 +44,18 @@
         <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.0.2_fed2d06515e47af54ae5fb6b8dce54a9d0201946/classes.dex" />
     </item>
     <item
-        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="21.1.2"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_7cb3ac3234a8d7e713be004ba5856fc0d1970751/classes.dex" />
-    </item>
-    <item
         jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
         jumboMode="true"
         revision="21.1.2"
         sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
         <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_c559166d7400a0ca685e7308e2de1b554651349a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_7cb3ac3234a8d7e713be004ba5856fc0d1970751/classes.dex" />
     </item>
     <item
         jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/jars/classes.jar"
@@ -82,7 +75,7 @@
         jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="21.1.2"
-        sha1="167e211da771db90f0ba3fe7d5f794bdd6838a85">
+        sha1="14300f191e25aff3fb01a81b7c44d0c2e45883d9">
         <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_cd517e2c266e67c2972831718af102a4d9109976/classes.dex" />
     </item>
     <item
@@ -103,7 +96,7 @@
         jar="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="21.1.2"
-        sha1="6b1d79b12fc78150b62d850635cccde81560e177">
+        sha1="5906f52c465d0dec3bca0088b6f1530d1a3bdb8e">
         <dex dex="/Users/Jordan/Documents/Uni/Android/WhereDidIPark/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a037984aae143a523c01422d9e05bee174feb0df/classes.dex" />
     </item>
 
